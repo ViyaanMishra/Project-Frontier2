@@ -1,0 +1,91 @@
+```
+# Unity-specific ignores
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+MemoryCaptures/
+UserSettings/
+
+# Compiled and build artifacts
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.ilk
+*.manifest
+*.mod
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Dependencies
+Packages/
+/node_modules/
+
+# Logs and temp files
+*.log
+*.tmp
+*.cache
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Build outputs
+build/
+dist/
+target/
+out/
+
+# Python artifacts (if any Python in project)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Compression files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
