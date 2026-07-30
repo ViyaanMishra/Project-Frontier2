@@ -1,21 +1,24 @@
 ```
-# Unity-specific ignores
+# Unity specific
 Library/
 Temp/
 Obj/
 Build/
-Logs/
+Builds/
 *.unityproj
 *.sln
+*.csproj
 *.user
 *.userprefs
 *.pidb
-*.booproj
-*.csproj
-*.unity
+*.pdb
 *.meta
-*.prefab
+*.log
+*.unitypackage
+[UnityProjectSettings]
+*.unity
 *.asset
+*.prefab
 *.mat
 *.anim
 *.controller
@@ -24,24 +27,21 @@ Logs/
 *.cubemap
 *.flare
 *.mat
+*.meta
+*.unityproj
+*.unity
+*.asset
+*.prefab
+*.mat
 *.anim
 *.controller
-*.physicsMaterial2D
-*.spriteatlas
-*.asmdef
-*.rsp
-*.asmref
+*.physicsMaterial
+*.renderTexture
+*.cubemap
+*.flare
 
-# Build artifacts
-*.exe
-*.dll
-*.so
-*.dylib
-*.pdb
-
-# Dependencies
-Packages/
-/node_modules/
+# Visual Studio Code
+.vscode/
 
 # Environment
 .env
@@ -53,5 +53,10 @@ Packages/
 
 # OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 ```
