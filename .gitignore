@@ -1,4 +1,3 @@
-```
 # Unity-specific ignores
 Library/
 Temp/
@@ -46,4 +45,3 @@ Thumbs.db
 .env
 .env.local
 *.env.*
-```
