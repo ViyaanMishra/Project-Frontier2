@@ -4,55 +4,46 @@ Library/
 Temp/
 Obj/
 Build/
-Logs/
-MemoryCaptures/
-*.unityproj
+Builds/
+*.unitypackage
+*.meta
+*.pidb
+*.userprefs
 *.sln
 *.csproj
 *.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.app
-*.exe
-*.dll
-*.pdb
-*.mdb
-*.pidb.meta
-*.prefab
-*.asset
-*.mat
-*.anim
-*.controller
-*.unity
-*.meta
-!*.prefab.meta
-!*.unity.meta
-!*.asset.meta
-!*.mat.meta
-!*.anim.meta
-!*.controller.meta
+*.unityproj
+*.log
 
-# Build artifacts
-Build/
-Builds/
+# Dependencies
+Packages/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.egg-info/
+dist/
+build/
+target/
+.gradle/
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# Environment variables
-.env
-.env.local
-*.env.*
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
 
 # Logs
 *.log
+unity.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.env.*
 ```
