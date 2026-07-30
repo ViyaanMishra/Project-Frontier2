@@ -6,40 +6,37 @@ Obj/
 Build/
 Logs/
 MemoryCaptures/
-UserSettings/
-
-# Compiled and build artifacts
-*.dll
+*.unityproj
+*.sln
+*.csproj
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.app
 *.exe
+*.dll
 *.pdb
 *.mdb
-*.ilk
-*.manifest
-*.mod
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+*.pidb.meta
+*.prefab
+*.asset
+*.mat
+*.anim
+*.controller
+*.unity
+*.meta
+!*.prefab.meta
+!*.unity.meta
+!*.asset.meta
+!*.mat.meta
+!*.anim.meta
+!*.controller.meta
 
-# Dependencies
-Packages/
-/node_modules/
-
-# Logs and temp files
-*.log
-*.tmp
-*.cache
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-*.swp
-*.swo
+# Build artifacts
+Build/
+Builds/
 
 # OS generated files
 .DS_Store
@@ -51,41 +48,11 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# Build outputs
-build/
-dist/
-target/
-out/
+# Environment variables
+.env
+.env.local
+*.env.*
 
-# Python artifacts (if any Python in project)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-
-# Compression files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# Logs
+*.log
 ```
