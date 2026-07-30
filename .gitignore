@@ -1,48 +1,74 @@
-# Unity generated
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-
-# Visual Studio cache/options
-.vs/
-*.suo
+```
+# Unity specific ignores
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+*.unityproj
+*.sln
+*.csproj
 *.user
-*.userosscache
-*.sln.docstates
-
-# MonoDevelop / JetBrains Rider
-*.pidb
 *.userprefs
-.idea/
-*.sln.iml
-
-# VS Code
-.vscode/
-
-# Unity specific files
-*.unitypackage
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.meta
 *.log
-*.tmp
-*.swp
-*.swo
+*.unitypackage
+[ResultOfTest].xml
+CrashlyticsSettings.xml
+UnityAdsSettings.xml
+UnityConnectSettings.asset
+ProjectSettings/
+Packages/
+UserSettings/
+WebGLTemplates/
+
+# Audio specific compiled files
+*.wav.meta
+*.mp3.meta
+*.ogg.meta
+*.aiff.meta
+*.flac.meta
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.manifest
+*.apk
+*.aab
+*.app
+*.bin
+*.hex
 
 # Dependencies
-Packages/
 node_modules/
 .venv/
 venv/
 __pycache__/
-*.egg-info/
-dist/
-build/
+.mypy_cache/
+.pytest_cache/
 target/
 .gradle/
+dist/
+build/
 
-# System generated
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -50,6 +76,13 @@ target/
 .Trashes
 ehthumbs.db
 Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Logs
+*.log
+```
 desktop.ini
 
 # Environment
