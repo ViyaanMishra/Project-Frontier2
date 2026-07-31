@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using Frontier.Core;
 
 namespace Frontier.Economy
 {
     /// <summary>
     /// Manages supply/demand pricing, currencies, trade routes, and market dynamics.
+    /// Integrated with the central EventBus for cross-system communication.
     /// </summary>
     public class EconomyManager : MonoBehaviour
     {
@@ -144,7 +146,7 @@ namespace Frontier.Economy
             
             marketStates[marketId] = state;
             
-            // Fire event
+            // Fire event through unified EventBus
             EventBus<TradeExecuted>.Raise(new TradeExecuted
             {
                 marketId = marketId,
@@ -152,6 +154,15 @@ namespace Frontier.Economy
                 quantity = quantity,
                 price = price,
                 isBuying = isBuying
+            });
+            
+            // Also publish economy fluctuation event for narrative system integration
+            EventBus<EconomyFluctuationEvent>.Raise(new EconomyFluctuationEvent
+            {
+                ItemID = itemId,
+                PriceChange = price,
+                MarketID = marketId,
+                EventType = isBuying ? EconomyFluctuationType.BuyPressure : EconomyFluctuationType.SellPressure
             });
             
             return true;
@@ -378,5 +389,27 @@ namespace Frontier.Economy
         public int quantity;
         public float price;
         public bool isBuying;
+    }
+
+    /// <summary>
+    /// Event for economy fluctuations that can trigger narrative events.
+    /// </summary>
+    public struct EconomyFluctuationEvent
+    {
+        public int ItemID;
+        public float PriceChange;
+        public int MarketID;
+        public EconomyFluctuationType EventType;
+    }
+
+    public enum EconomyFluctuationType
+    {
+        BuyPressure,
+        SellPressure,
+        Scarcity,
+        Surplus,
+        TradeRouteDisrupted,
+        MarketCrash,
+        MarketBoom
     }
 }
