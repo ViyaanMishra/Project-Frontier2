@@ -1,34 +1,69 @@
 ```
-# Unity-specific ignores
-Library/
-Temp/
-Obj/
-Build/
-Builds/
-*.unityproj
-*.sln
-*.csproj
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.opendb
-*.VC.db
-*.VC.VC.opendb
-[Bb]uild/
-[Bb]uilds/
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-Logs/
-Exports/
-.cache/
-*.unitypackage
-UnityGenerated/
-csc.rsp
-.mdb
-*.mdb
-.vs/
+# Compiled and binary files
+*.dll
+*.exe
+*.so
+*.a
+*.obj
+*.out
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
+
+# Build artifacts
+dist/
+build/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
