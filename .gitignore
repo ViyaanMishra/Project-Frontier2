@@ -4,94 +4,21 @@ Library/
 Temp/
 Obj/
 Build/
+Logs/
+UserSettings/
+
+# Asset meta files (if not already tracked)
+*.meta
+
+# Build outputs
+Build/
 Builds/
-*.unityproj
-*.sln
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.opendb
-*.VC.db
-*.VC.VC.opendb
-[Bb]uild/
-[Bb]uilds/
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Uu]serSettings/
-[Ss]cript[Aa]ssemblies/
-logs/
-*.cs.meta
-*.prefab.meta
-*.unity.meta
-*.asset.meta
-*.mat.meta
-*.anim.meta
-*.controller.meta
-*.mask.meta
-*.physicMaterial.meta
-*.physicsMaterial2D.meta
-*.prefab.meta
-*.spriteatlas.meta
-*.fontsettings.meta
-*.asmdef.meta
-*.rsp.meta
-*.guiskin.meta
-*.js.meta
-*.boo.meta
-*.cginc.meta
-*.compute.meta
-*.ttf.meta
-*.otf.meta
-*.mat.meta
-*.cubemap.meta
-*.flare.meta
-*.pptx.meta
-*.xlsx.meta
-*.pdf.meta
-*.docx.meta
-*.jar.meta
-*.meta~*
-*.unity~*
-*.asset~*
-*.prefab~*
-*.mat~*
-*.anim~*
-*.controller~*
-*.mask~*
-*.physicMaterial~*
-*.physicsMaterial2D~*
-*.spriteatlas~*
-*.fontsettings~*
-*.asmdef~*
-*.rsp~*
-*.guiskin~*
-*.js~*
-*.boo~*
-*.cginc~*
-*.compute~*
 
-# Visual Studio Code
-.vscode/
+# Compressed assets
+*.unitypackage
 
-# Environment variables
-.env
-.env.local
-*.env.*
-
-# Logs
-*.log
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
+# Unity-generated files
+.sln
+.csproj
+.userprefs
 ```
