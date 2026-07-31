@@ -1,34 +1,48 @@
 ```
-# Unity-specific ignores
-Library/
-Temp/
-Obj/
-Build/
-Builds/
-*.unityproj
-*.sln
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.cache
-*.lock
-*.meta
-!Packages/manifest.json
-!Packages/packages-lock.json
-*.log
-
-# Editor-specific
-.vscode/
-.idea/
-
 # Environment
 .env
 .env.local
 *.env.*
 
-# OS generated files
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.julia/
+zig*/
+target/
+.gradle/
+
+# Compiled and build artifacts
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+dist/
+build/
+coverage/
+htmlcov/
+*.coverage
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
 .DS_Store
 Thumbs.db
+*.tmp
+
+# Logs
+*.log
 ```
