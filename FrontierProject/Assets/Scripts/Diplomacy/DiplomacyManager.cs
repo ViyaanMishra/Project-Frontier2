@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using Frontier.Core;
 
 namespace Frontier.Diplomacy
 {
     /// <summary>
     /// Manages faction relations, trade agreements, war/peace states, and diplomatic actions.
+    /// Integrated with the central EventBus for cross-system communication.
     /// </summary>
     public class DiplomacyManager : MonoBehaviour
     {
@@ -58,13 +60,26 @@ namespace Frontier.Diplomacy
             
             factionStates[factionId] = state;
             
-            // Fire event
+            // Fire event through unified EventBus
             EventBus<FactionReputationChanged>.Raise(new FactionReputationChanged
             {
                 factionId = factionId,
                 oldReputation = state.reputation - actualChange,
                 newReputation = state.reputation,
                 reason = reason
+            });
+            
+            // Publish to faction politics system for simulation integration
+            EventBus<FactionConflictEvent>.Raise(new FactionConflictEvent
+            {
+                FactionA = factionId,
+                ConflictType = reason switch
+                {
+                    ReputationReason.Murder or ReputationReason.Theft or ReputationReason.TerritoryViolation => ConflictType.HostileAction,
+                    ReputationReason.QuestCompletion or ReputationReason.CombatAssist => ConflictType.CooperativeAction,
+                    _ => ConflictType.DiplomaticAction
+                },
+                Severity = Mathf.Abs(actualChange) / 100f
             });
         }
         

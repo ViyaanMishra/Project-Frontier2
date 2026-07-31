@@ -344,6 +344,62 @@ namespace Frontier.Core
         }
     }
 
+    /// <summary>
+    /// Static convenience wrapper for EventBus to enable quick event raising without dependency injection.
+    /// Automatically uses the EventBus instance from GameSession when available.
+    /// </summary>
+    public static class EventBus<T> where T : struct
+    {
+        private static Action<T> _cachedDelegate;
+        
+        /// <summary>
+        /// Raise an event through the central EventBus.
+        /// Falls back to a null check if GameSession is not initialized.
+        /// </summary>
+        public static void Raise(T eventData)
+        {
+            if (GameSession.Instance != null && GameSession.Instance.IsInitialized)
+            {
+                GameSession.Instance.Events.Publish(eventData);
+            }
+            else
+            {
+                // Fallback: direct delegate invocation for early initialization scenarios
+                _cachedDelegate?.Invoke(eventData);
+            }
+        }
+
+        /// <summary>
+        /// Subscribe to this event type.
+        /// </summary>
+        public static void Subscribe(Action<T> listener)
+        {
+            if (GameSession.Instance != null && GameSession.Instance.IsInitialized)
+            {
+                GameSession.Instance.Events.Subscribe(listener);
+            }
+            else
+            {
+                _cachedDelegate += listener;
+            }
+        }
+
+        /// <summary>
+        /// Unsubscribe from this event type.
+        /// </summary>
+        public static void Unsubscribe(Action<T> listener)
+        {
+            if (GameSession.Instance != null && GameSession.Instance.IsInitialized)
+            {
+                GameSession.Instance.Events.Unsubscribe(listener);
+            }
+            else
+            {
+                _cachedDelegate -= listener;
+            }
+        }
+    }
+
     #region Common Event Types
 
     public enum DamageType
