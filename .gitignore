@@ -1,55 +1,32 @@
 ```
-# Unity specific
+# Unity-specific ignores
 Library/
 Temp/
 Obj/
 Build/
-Builds/
+Logs/
 *.unityproj
 *.sln
 *.csproj
 *.user
 *.userprefs
 *.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendive
+*.VC.db
+*.VC.VC.opendive
+
+# Build artifacts
+*.dll
+*.exe
 *.pdb
 *.meta
-*.log
-*.unitypackage
-[UnityProjectSettings]
-*.unity
-*.asset
-*.prefab
-*.mat
-*.anim
-*.controller
-*.physicsMaterial
-*.renderTexture
-*.cubemap
-*.flare
-*.mat
-*.meta
-*.unityproj
-*.unity
-*.asset
-*.prefab
-*.mat
-*.anim
-*.controller
-*.physicsMaterial
-*.renderTexture
-*.cubemap
-*.flare
 
-# Visual Studio Code
+# Config
 .vscode/
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Logs
-*.log
+.idea/
 
 # OS generated files
 .DS_Store
