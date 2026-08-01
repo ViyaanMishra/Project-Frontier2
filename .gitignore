@@ -1,10 +1,9 @@
 ```
-# Unity specific ignores
+# Unity project files
 Library/
 Temp/
 Obj/
 Build/
-Builds/
 *.unityproj
 *.sln
 *.csproj
@@ -13,21 +12,37 @@ Builds/
 *.pidb
 *.pdb
 *.meta
-*.cache
 *.log
+csc.rsp
+.mdb
+*.cache
+*.ilk
+*.manifest
+*.exp
+*.lib
+.vs/
+.idea/
 
-# Visual Studio Code
-.vscode/
+# Build artifacts
+build/
+dist/
 
-# Environment variables
+# Dependencies
+Packages/
+node_modules/
+
+# Environment
 .env
 .env.local
 *.env.*
 
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
 # Logs
 *.log
-
-# Temporary files
-*.tmp
-*.temp
 ```
